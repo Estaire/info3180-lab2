@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class="profile">
+	<div class="top">
+		<img src="{{url_for('static', filename='app/static/profile_pic.jpg')}}" />
+		<h3 style="font-weight: bold;">Justin Gennard</h3>
+		<p>@Estaire</p>
+		<p>Kingston, Jamaica</p>
+		<p>{{date}}</p>
+	</div>
+	<div class="bottom">
+		<p>I'm an aspiring software engineer and web developer currently studying at the University of the West Indies Mona campus</p>
+		<div class="numbers">
+			<h5>7</h5>
+			<h5>100</h5>
+			<h5>250</h5>
+		</div>
+		<div class="types">
+			<p>Posts</p>
+			<p>Followers</p>
+			<p>Following</p>
+		</div>
+		<button type="button">Follow</button>
+	</div>
+</div>
+{% endblock %}

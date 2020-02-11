@@ -7,12 +7,18 @@ This file creates your application.
 
 from app import app
 from flask import render_template, request, redirect, url_for, flash
+import datetime
 
 
 ###
 # Routing for your application.
 ###
 
+def format_date_joined(year, month, date):
+    now = datetime.datetime.now()
+    date_joined = datetime.date(2019, 2, 7)
+    return "Joined " + date_joined.strftime("%B, %Y")
+    
 @app.route('/')
 def home():
     """Render website's home page."""
@@ -35,6 +41,9 @@ def send_text_file(file_name):
     file_dot_text = file_name + '.txt'
     return app.send_static_file(file_dot_text)
 
+@app.route('/profile')
+def profile():
+    return render_template('profile.html', date=format_date_joined(2020, 2, 9))
 
 @app.after_request
 def add_header(response):

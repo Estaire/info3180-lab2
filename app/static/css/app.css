@@ -1,3 +1,65 @@
+*{
+	font-family: Arial;
+}
+
 body {
     padding-top: 5rem;
+    text-align: center;
 }
+
+h5{
+	color: black;
+	font-weight: bold;
+}
+
+.profile{
+	border: 1px solid grey;
+	border-radius: 10px;
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas: 
+	"top"
+	"bottom";
+	margin: 150px;
+}
+
+.top{
+	color: white;
+	grid-area: top;
+	background-color: #559a5d;
+}
+
+.bottom{
+	color: grey;
+	grid-area: bottom;
+	padding: 10px 50px;
+}
+
+.bottom button{
+	background-color: rgb(110, 206, 26);
+	border-color: rgb(110, 206, 26);
+	border-radius: 5px;
+	border-style: solid;
+	color: white;
+	width: 150px;
+	margin: 20px 0px;
+}
+
+.bottom p{
+	padding-bottom: 10px;
+}
+
+.numbers{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 100%;
+}
+
+.types{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 100%;
+}
+
